@@ -27,7 +27,7 @@ func cleanData(data []interface{}) []float64 {
 func Mean(data []interface{}) (float64, int) {
 	nums := cleanData(data)
 	if len(nums) == 0 {
-		return 0, 0
+		return -1, 0
 	}
 
 	sum := 0.0
@@ -41,7 +41,7 @@ func Mean(data []interface{}) (float64, int) {
 func SD(data []interface{}) (float64, int) {
 	nums := cleanData(data)
 	if len(nums) == 0 {
-		return 0, 0
+		return -1, 0
 	}
 	mean, _ := Mean(data)
 	vars := 0.0
